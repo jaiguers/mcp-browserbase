@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browserbase MCP Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-card">
+        <header class="chat-header">
+          <p class="eyebrow">Browserbase MCP + Gemini</p>
+          <h1>Navegacion asistida</h1>
+          <p class="subtitle">
+            Escribe instrucciones como "entra a https://example.com y dime que ves".
+          </p>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+
+        <form id="chat-form" class="chat-form">
+          <label class="sr-only" for="message">Instruccion</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            placeholder="Ejemplo: entra a https://news.ycombinator.com y resume los titulares"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
